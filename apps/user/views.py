@@ -4,4 +4,12 @@ from django.http import HttpResponse
 
 
 def index(response):
-    return HttpResponse("ceshi")
+    context = {
+        'haha':'哈哈哈',
+    }
+
+    return render(response,'index.html',context)
+
+
+def login(response):
+    return HttpResponse("注册页面")
